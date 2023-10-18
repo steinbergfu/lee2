@@ -127,7 +127,7 @@ while (time.time() <= timeout ):
         app.historicalDataover()
         time.sleep(2)
         app.reqHistoricalData(1, contract, '', '1200 S', '1 min', 'TRADES', 0, 1, False, [])
-        # 获取的是最新的数据，包括不到5分钟的bar
+        
         time.sleep(2)  # sleep to allow enough time for data to be returned
         # headers = ['DateTime', 'Open', 'High', 'Low', 'Close','Volume']
         # print(dict(zip(headers, app.data)))
