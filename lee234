@@ -1,3 +1,9 @@
+
+Created on Tue Nov 28 18:51:11 2023
+
+@author: user
+"""
+
 from ibapi.client import EClient
 from ibapi.wrapper import EWrapper
 from decimal import Decimal, getcontext
@@ -44,3 +50,8 @@ contract.exchange = 'Eurex'
 contract.currency = 'EUR'
 contract.multiplier=1
 contract.lastTradeDateOrContractMonth = '202312'
+
+# app.reqPnLSingle(17002, "DU7065203", "", 621358845)
+# print()
+app.run() # delete this line if threading
+app.reqPnLSingle(17002, "DU7065203", "", 621358845)
