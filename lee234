@@ -1,17 +1,14 @@
-
-Created on Tue Nov 28 18:51:11 2023
-
-@author: user
-"""
-
 from ibapi.client import EClient
 from ibapi.wrapper import EWrapper
 from decimal import Decimal, getcontext
 from ibapi.utils import decimalMaxString,floatMaxString
+import pandas as pd
 
-
-class MyWrapper(EWrapper):
-
+class MyWrapper(EWrapper, EClient):
+    
+    def __init__(self):
+        EClient.__init__(self, self)
+        
     def nextValidId(self, orderId:int):
         print("setting nextValidOrderId: %d", orderId)
         
